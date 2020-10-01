@@ -2,10 +2,18 @@
 
 Use `fzf` to browse your directories using fuzzy method.
 
+~[Screenshot](screenshot.gif)
+
 ## Usage
 
 ```bash
 fd
+```
+
+`fd` will look at directories in the current working directory, but if you want to look further, you can supply a depth, e.g.:
+
+```bash
+fd 2
 ```
 
 ## Requires
