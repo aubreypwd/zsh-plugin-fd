@@ -2,7 +2,7 @@
 
 Use `fzf` to browse your directories using fuzzy method.
 
-~[Screenshot](screenshot.gif)
+![Screenshot](screenshot.gif)
 
 ## Usage
 
