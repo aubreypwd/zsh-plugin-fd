@@ -1,15 +1,16 @@
-# ``
+# `fd`
 
-Description
+Use `fzf` to browse your directories using fuzzy method.
 
 ## Usage
 
 ```bash
+fd
 ```
 
 ## Requires
 
-- `...`<sup>*</sup>
+- `fzf`<sup>*</sup>
 
 <sup>*</sup> If using [homebrew](https://brew.sh) on macOS, these will automatically be installed.
 
@@ -18,7 +19,7 @@ Description
 Using [antigen](https://github.com/zsh-users/antigen):
 
 ```bash
-antigen bundle aubreypwd/zsh-plugin-NAME@1.0.0
+antigen bundle aubreypwd/zsh-plugin-fd@1.0.0
 ```
 
 ## Development
@@ -26,10 +27,10 @@ antigen bundle aubreypwd/zsh-plugin-NAME@1.0.0
 Install the package on `master`:
 
 ```bash
-antigen bundle aubreypwd/zsh-plugin-NAME
+antigen bundle aubreypwd/zsh-plugin-fd
 ```
 
-...and contribute upstream by working in `$HOME/.antigen/bundles/aubreypwd/zsh-plugin-NAME`.
+...and contribute upstream by working in `$HOME/.antigen/bundles/aubreypwd/zsh-plugin-fd`.
 
 ---
 
