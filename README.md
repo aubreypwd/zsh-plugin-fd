@@ -35,7 +35,7 @@ antigen bundle aubreypwd/zsh-plugin-fd@1.0.0
 Install the package on `master`:
 
 ```bash
-antigen bundle aubreypwd/zsh-plugin-fd
+antigen bundle ssh://git@github.com/aubreypwd/zsh-plugin-fd
 ```
 
 ...and contribute upstream by working in `$HOME/.antigen/bundles/aubreypwd/zsh-plugin-fd`.
