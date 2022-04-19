@@ -44,6 +44,8 @@ antigen bundle ssh://git@github.com/aubreypwd/zsh-plugin-fd
 
 ## Changelog
 
+All changelogs beyond these were moved to Github releases.
+
 ### 1.0.1
 
 - Tries to install `fzf` for you if using `antigen` method via `brew`

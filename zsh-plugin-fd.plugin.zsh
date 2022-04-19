@@ -1,9 +1,6 @@
 #!/bin/zsh
 
-if [[ $(command -v antigen) ]]; then
-	antigen bundle aubreypwd/zsh-plugin-require@1.0.1
-	antigen apply
-
+if [[ $(command -v require) ]]; then
 	require "fzf-tmux" "brew reinstall fzf" "brew" # Automatically install fzf using homebrew.
 fi
 
@@ -15,6 +12,7 @@ fi
  # @since Wednesday, 9/11/2019
  ##
 function fd {
+
 	if ! [[ -x $(command -v fzf) ]]; then >&2 echo "Please install fzf (specifically fzf-tmux) to use fd." && return; fi
 	if ! [[ -x $(command -v find) ]]; then >&2 echo "Requires find command." && return; fi
 
