@@ -18,9 +18,9 @@ fd 2
 
 ## Requires
 
-- `fzf`<sup>*</sup>
+- `fzf`
 
-<sup>*</sup> If using [homebrew](https://brew.sh) on macOS, these will automatically be installed.
+If you use https://github.com/aubreypwd/zsh-plugin-require, we will try and automatically handle dependancies.
 
 ## Install
 
