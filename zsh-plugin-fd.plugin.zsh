@@ -1,27 +1,33 @@
-#!/bin/zsh
+#!/bin/sh
 
-if [[ $(command -v require) ]]; then
-	require "fzf-tmux" "brew reinstall fzf" "brew" # Automatically install fzf using homebrew.
+###
+ # shellcheck disable=SC2006,SC2035,SC2086
+ ##
+
+if [ "$(command -v require)" ]; then
+	require "fzf" "brew reinstall fzf" "brew" # Automatically install fzf using homebrew.
 fi
 
 ###
  # Similar to cd, but using fzf.
  #
- # E.g: fd
+ # E.g: fd [number]
  #
  # @since Wednesday, 9/11/2019
+ #
  ##
-function fd {
+fd () {
 
-	if ! [[ -x $(command -v fzf) ]]; then >&2 echo "Please install fzf (specifically fzf-tmux) to use fd." && return; fi
-	if ! [[ -x $(command -v find) ]]; then >&2 echo "Requires find command." && return; fi
+	if ! [ -x "$(command -v fzf)" ]; then >&2 echo "Please install fzf to use fd." && return 1; fi
+	if ! [ -x "$(command -v find)" ]; then >&2 echo "Requires find command." && return 1; fi
 
-	local DEPTH=0
+	DEPTH=0
 
 	if [ -n "$1" ]; then
 		DEPTH="$1"
 	fi
+	DIR=`find -L * -maxdepth $DEPTH -type d -print 2> /dev/null | fzf --height=100%` \
+		&& cd "$DIR" || return 1
 
-	local DIR=`find -L * -maxdepth $DEPTH -type d -print 2> /dev/null | fzf-tmux` \
-		&& cd "$DIR"
+	return 0
 }

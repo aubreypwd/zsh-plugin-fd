@@ -2,6 +2,8 @@
 
 Use `fzf` to browse your directories using fuzzy method.
 
+- Requires `fzf`
+
 ![Screenshot](screenshot.gif)
 
 ## Usage
@@ -39,17 +41,3 @@ antigen bundle ssh://git@github.com/aubreypwd/zsh-plugin-fd
 ```
 
 ...and contribute upstream by working in `$HOME/.antigen/bundles/aubreypwd/zsh-plugin-fd`.
-
----
-
-## Changelog
-
-All changelogs beyond these were moved to Github releases.
-
-### 1.0.1
-
-- Tries to install `fzf` for you if using `antigen` method via `brew`
-
-### 1.0.0
-
-- First version
